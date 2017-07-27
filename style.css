@@ -1,0 +1,72 @@
+body *{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 850px;
+    /* margin-left: 30px; */
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    /* background-color: lightgray; */
+}
+.infos{
+    height: 400px;
+    width: 400px;
+    background: lightcyan;
+    border: 1px solid lightslategray;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#form1 {
+    margin: 10px 0 0 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+#firstname, #lastname {
+    width: 200px;
+    height: 20px;
+    margin-top:10px;
+    vertical-align:right;
+}
+
+#description {
+    display: block;
+    margin-bottom: 10px;
+}
+#contact1{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.user_contact{
+    border: 1px solid lightslategray;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    padding-top: 50px;
+    display: inline-block;
+    vertical-align: top;
+}
+.user_contact p{
+    margin-top: 10px;
+
+}
+
+h3{
+    margin-top: 10px;
+}
+#adduser{
+    width:80px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+}

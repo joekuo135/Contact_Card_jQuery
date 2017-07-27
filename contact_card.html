@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+
+            // $('#adduser').click(function() {
+            $('#form1').submit(function(e) {
+                e.preventDefault;
+                var first_name=$('#firstname').val();
+                var last_name=$('#lastname').val();
+                var description=$('#description').val();
+
+                if(first_name ==""){
+                    alert("First name is required!")
+                    return false;
+                }
+                if(last_name ==""){
+                    alert("Last name is required!")
+                    return false;
+                }
+
+                $('#contact1').append('<div class="user_contact"><h3>'+first_name+' '+last_name+'</h3><p class="clicking">Click for description!</p><p class=\'backside\' style="display:none;">'+description+'</p></div>');
+                $('#firstname').val('');
+                $('#lastname').val('');
+                $('#description').val('');
+                return false;
+            });
+            // });
+        
+            $(document).on('click','.user_contact',function() {
+                $(this).children('p.backside').slideToggle();
+                $(this).children('h3,p.clicking').slideToggle();
+            });
+            
+        }); 
+
+    </script>
+
+    <title>Contact Card</title>
+</head>
+<body>
+    <div class="container">
+        <div class="infos">
+            <form id="form1">
+                <div>
+                    <label for="firstname">First Name:</label>
+                    <input id="firstname" type="text">
+                </div>
+                <div>
+                    <label for="lastname">Last Name:</label>
+                    <input id="lastname" type="text">
+                </div>
+                <div>
+                    <h3>Description:</h3>
+                    <textarea id="description" name="description" cols="50" rows="15"></textarea>
+                </div>
+                <button id="adduser">Add User</button>
+            </form>
+        </div>
+        <div id="contact1">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
